@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="Style_register.css">
+</head>
+<body>
+
+    <h2 class="judul-atas">Silahkan Isi Data</h2>
+
+    <div class="card-pendaftaran">
+        <form action="#">
+            
+            <div class="input-group">
+                <input type="text" id="first-name" placeholder=" " required>
+                <label for="first-name">First name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="middle-name" placeholder=" ">
+                <label for="middle-name">Middle name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="last-name" placeholder=" " required>
+                <label for="last-name">Last name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="date" id="dob" required>
+                <label for="dob" class="label-tetap">Tanggal Lahir</label>
+            </div>
+
+            <div class="radio-group">
+                <span class="radio-label-top">Jenis Kelamin :</span>
+                <div class="radio-options">
+                    <label>
+                        <input type="radio" name="gender" value="pria"> Pria
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="wanita"> Wanita
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <select id="tempat-tinggal" required>
+                    <option value="" disabled selected></option>
+                    <option value="Medan">Medan</option>
+                    <option value="Sunggal">Sunggal</option>
+                    <option value="Pakam">Pakam</option>
+                    <option value="Helvet">Helvet</option>
+                    <option value="Johor">Johor</option>
+                </select>
+                <label for="tempat-tinggal">Tempat Tinggal</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder=" " required>
+                <label for="phone">Phone</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="btn-register">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                REGISTER
+            </button>
+
+            <div class="footer-link">
+                <span class="text-kembali">Kembali</span>
+                <a href="login.html" class="btn-back">Back</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

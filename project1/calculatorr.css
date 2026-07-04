@@ -1,0 +1,128 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: hsl(329, 53%, 75%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-shell {
+  width: 340px;
+  border-radius: 28px;
+  border: 0.5px solid #c8c5be;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.calc-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 0.5px solid #e0ddd8;
+}
+
+.calc-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #aaa9a4;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.calc-expression {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 300;
+  color: #888780;
+  min-height: 20px;
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+
+.calc-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 40px;
+  font-weight: 400;
+  color: #2c2c2a;
+  text-align: right;
+  line-height: 1.1;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: font-size 0.1s;
+}
+
+.calc-display.small  { font-size: 28px; }
+.calc-display.xsmall { font-size: 20px; }
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: hsl(38, 73%, 79%);
+  border-top: 1px solid #e0ddd8;
+}
+
+.btn {
+  background: #ffffff;
+  border: none;
+  height: 72px;
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #2c2c2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, transform 0.08s;
+  user-select: none;
+}
+
+.btn:hover  { background: #f5f3ef; }
+.btn:active { background: #e8e5e0; transform: scale(0.94); }
+
+.btn.op     { color: #185FA5; font-size: 20px; }
+
+.btn.fn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5f5e5a;
+  letter-spacing: 0.04em;
+}
+
+.btn.danger { color: hwb(0 7% 23%); }
+
+.btn.zero {
+  grid-column: span 2;
+  justify-content: flex-start;
+  padding-left: 28px;
+}
+
+.btn.eq {
+  background: #185FA5;
+  color: #ffffff;
+  font-size: 22px;
+}
+.btn.eq:hover  { background: #0C447C; }
+.btn.eq:active { background: #042C53; transform: scale(0.94); }
+
+.history-bar {
+  padding: 10px 1.5rem;
+  border-top: 0.5px solid #e0ddd8;
+  min-height: 36px;
+}
+
+.history-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #bfc0cf;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

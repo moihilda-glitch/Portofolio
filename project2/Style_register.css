@@ -1,0 +1,274 @@
+/* RESET DASAR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #66bb6a, #2e7d32);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* JUDUL ATAS */
+.judul-atas {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+/* CARD PENDAFTARAN */
+.card-pendaftaran {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
+    color: white;
+    padding: 8px 0;
+    outline: none;
+    font-size: 14px;
+}
+
+/* SELECT */
+.input-group select {
+    background: #a3e0b7;
+    color: #2e7d32;
+    padding: 8px 5px;
+    border-radius: 4px 4px 0 0;
+}
+
+.input-group select option {
+    background-color: #03e9f4;
+    color: #2e7d32;
+}
+
+/* FLOATING LABEL */
+.input-group label {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    pointer-events: none;
+    transition: 0.3s ease all;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group select:focus ~ label,
+.input-group select:valid ~ label {
+    top: -15px;
+    font-size: 11px;
+    color: pink;
+    opacity: 1;
+}
+
+.label-tetap {
+    top: -15px !important;
+    font-size: 11px !important;
+    color: pink !important;
+}
+
+/* RADIO GROUP */
+.radio-group {
+    margin-bottom: 25px;
+}
+
+.radio-label-top {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-options label {
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* BUTTON REGISTER */
+.btn-register {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 10px;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    appearance: none;
+    outline: none;
+}
+
+.btn-register span {
+    position: absolute;
+    display: block;
+}
+
+/* ATAS */
+.btn-register span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+/* KANAN */
+.btn-register span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+/* BAWAH */
+.btn-register span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+
+/* KIRI */
+.btn-register span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+
+/* Hover button */
+.btn-register:hover {
+    background: #03e9f4;
+    color: white;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+/* FOOTER LINK */
+.footer-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* FIX hover link */
+.footer-link a:not(.btn-back):hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+/* Icon kalender putih */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* jarak antara Kembali dan Back */
+    margin-top: 20px;
+}
+
+.text-kembali {
+    color: white;
+    font-size: 14px;
+}
+
+.btn-back {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    background: none;
+    transition: 0.3s;
+}
+
+/* Saat diarahkan/disentuh */
+.btn-back:hover {
+    color: #03e9f4;
+    text-shadow: 0 0 5px #03e9f4,
+                 0 0 15px #03e9f4;
+}
+
+/* ANIMASI */
+@keyframes btn-anim1 {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+}
+
+@keyframes btn-anim2 {
+    0% { top: -100%; }
+    50%, 100% { top: 100%; }
+}
+
+@keyframes btn-anim3 {
+    0% { right: -100%; }
+    50%, 100% { right: 100%; }
+}
+
+@keyframes btn-anim4 {
+    0% { bottom: -100%; }
+    50%, 100% { bottom: 100%; }
+}
